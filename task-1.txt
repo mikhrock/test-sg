@@ -1,4 +1,0 @@
-My favourite git branching strategy is Git Flow.
-To me it looks like the most logical one - you develop on dev, your master is live. If you are working on a feature, you create a branch from dev and return it there.
-I think master should be a stable working version of the project which is currently live. You can always refer to it to know what is the state of live project.
-Everything else should have its own branch, and what gets merged into master should be ready and tested.
