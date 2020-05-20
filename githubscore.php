@@ -7,18 +7,20 @@
  * Assignment: please refactor this code to be cleaner.
  */
 
-$result = json_decode(file_get_contents('activity.json'), true);
+$activityJson = file_get_contents('activity.json');
 
-$types = [];
+$activity = json_decode($activityJson, true);
 
-foreach ($result as $event) {
-    $types[] = $event['type'];
+$eventTypes = [];
+
+foreach ($activity as $event) {
+    $eventTypes[] = $event['type'];
 }
 
 $score = 0;
 
-foreach ($types as $type) {
-    switch ($type) {
+foreach ($eventTypes as $eventType) {
+    switch ($eventType) {
         case 'PushEvent':
             $score += 5;
             break;
